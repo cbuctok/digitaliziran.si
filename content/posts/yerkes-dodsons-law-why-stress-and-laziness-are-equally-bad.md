@@ -1,7 +1,7 @@
 ---
-title: "Yerkes-Dodson's Law: Why Stress and Laziness are Equally Bad 😂"
+title: "Yerkes-Dodson's Law: Why Stress and Laziness are Equally Bad"
 date: 2023-03-13T10:00:00
-slug: "yerkes-dodsons-law-why-stress-and-laziness-are-equally-bad-%f0%9f%98%82"
+slug: "yerkes-dodsons-law-why-stress-and-laziness-are-equally-bad"
 categories: ["team"]
 tags: ["eli5", "en", "happiness", "software development", "team"]
 ---
