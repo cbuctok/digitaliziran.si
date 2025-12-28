@@ -2,7 +2,7 @@
 <div class="homepage">
   <!-- Tag Cloud -->
   <section class="tag-cloud">
-    <h2>Topics</h2>
+    <div class="section-label">Topics</div>
     <div class="tags">
       {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
         {{ if gt (len $taxonomy.Pages) 2 }}
@@ -16,11 +16,11 @@
 
   <!-- Recent Posts -->
   <section class="recent-posts">
-    <h2>Recent</h2>
+    <div class="section-label">Recent</div>
     {{ range first 15 .Site.RegularPages }}
       <article class="post-card">
         <time datetime='{{ .Date.Format "2006-01-02" }}'>{{ .Date.Format "Jan 2, 2006" }}</time>
-        <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
         {{ with .Summary }}<p class="summary">{{ . }}</p>{{ end }}
         <div class="post-tags">
           {{ range .GetTerms "tags" }}

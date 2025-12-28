@@ -4,6 +4,8 @@ date: 2025-08-14T09:32:47
 slug: the-silent-standard-why-iso-iec-42005-could-be-your-agentic-ai-safety-net
 categories: ["AI", "audit", "General", "safety"]
 tags: ["Atrophied and Unprepared", "en", "impact assessment", "risk assessment"]
+related:
+- posts/thinking-about-deploying-ai-agents-read-this-first
 ---
 Are you prepared for the autonomous AI revolution that's already knocking at your door? While [Gartner identifies agentic AI as a strategic trend for 2025](https://www.riskinsight-wavestone.com/2025/07/ia-agentic-typologie-des-risques-et-principales-mesures-de-securite/), there's a critical piece of the puzzle that most professionals are overlooking: [ISO/IEC 42005:2025](https://www.iso.org/standard/42005).
 
@@ -62,5 +64,3 @@ The agentic AI evolution is underway, but it doesn't have to be reckless. ISO/IE
 The question isn't whether you'll encounter AI-related challenges - it's whether you'll be prepared with proper impact assessment frameworks when they arrive. While some competitors rush to deploy the latest AI agents, those who invest in comprehensive impact assessment today - combined with realistic planning and clear business objectives - will build the trust and resilience needed for long-term success.
 
 **Are your AI governance frameworks ready for autonomous agents, or are you prepared to navigate both the opportunities and challenges ahead?**
-
-/2025/04/02/thinking-about-deploying-ai-agents-read-this-first/

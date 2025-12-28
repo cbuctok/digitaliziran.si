@@ -4,6 +4,10 @@ date: 2025-08-27T07:26:05
 slug: the-ai-security-crisis-you-cant-ignore-why-simon-willisons-lethal-trifecta-demands-immediate-action
 categories: ["AI", "CISO", "safety", "Security"]
 tags: ["AI", "Atrophied and Unprepared", "en", "safety", "security"]
+related:
+- posts/the-silent-standard-why-iso-iec-42005-could-be-your-agentic-ai-safety-net
+- posts/your-ai-guardrails-just-got-outsmarted-by-emojis-the-semantic-prompt-injection-crisis
+- posts/thinking-about-deploying-ai-agents-read-this-first
 ---
 Are your AI systems creating a perfect storm for data theft? Security researcher [Simon Willison's recent analysis](https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/) reveals a chilling reality: AI agents combining three specific capabilities create what he calls the "lethal trifecta" – a combination so dangerous that attackers can easily trick systems into accessing private data and sending it directly to them.
 
@@ -62,9 +66,3 @@ It's important to note that Willison's concept, while valuable, represents one s
 ISO 42001 provides structure for addressing these challenges, offering a framework that helps organizations balance AI innovation with responsible deployment. As AI systems become more autonomous and integrated into business processes, having proper governance frameworks isn't optional – it's essential for survival.
 
 **The bottom line**: lethal trifecta analysis should serve as a wake-up call. The question isn't whether your organization will encounter these risks, but whether you'll be prepared with proper governance frameworks when they emerge. Don't let innovation outpace security – the cost of getting it wrong is too high.
-
-/2025/08/14/the-silent-standard-why-iso-iec-42005-could-be-your-agentic-ai-safety-net/
-
-/2025/08/03/your-ai-guardrails-just-got-outsmarted-by-emojis-the-semantic-prompt-injection-crisis/
-
-/2025/04/02/thinking-about-deploying-ai-agents-read-this-first/

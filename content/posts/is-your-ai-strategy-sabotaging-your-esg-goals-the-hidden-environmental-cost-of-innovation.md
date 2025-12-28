@@ -4,6 +4,8 @@ date: 2025-06-24T08:28:54
 slug: is-your-ai-strategy-sabotaging-your-esg-goals-the-hidden-environmental-cost-of-innovation
 categories: ["AI", "ESG"]
 tags: ["en", "energy", "environment"]
+related:
+- posts/is-your-team-ready-for-ai-why-education-must-come-before-implementation
 ---
 Picture this: your company just announced ambitious [net-zero commitments](https://www.un.org/en/climatechange/net-zero-coalition) while simultaneously deploying AI systems that could consume as much electricity as 120 homes annually. Sound contradictory? You're not alone - and you might be unknowingly undermining your [Environmental, Social, and Governance (ESG)](https://www.ibm.com/think/topics/environmental-social-and-governance) objectives.
 
@@ -44,5 +46,3 @@ To ensure your AI initiatives support rather than sabotage your ESG goals:
 As [recent academic research confirms](https://www.tandfonline.com/doi/full/10.1080/00036846.2025.2517421), embedding environmental awareness in AI strategies is vital for fostering sustainable innovation and building organizational trust. The question isn't whether AI will impact your environmental footprint - it's whether you'll manage that impact strategically.
 
 **Are you building AI systems that advance your ESG commitments, or are you creating a sustainability blind spot that could undermine years of environmental progress?** The choice - and the competitive advantage - is yours.
-
-/2025/06/02/is-your-team-ready-for-ai-why-education-must-come-before-implementation/

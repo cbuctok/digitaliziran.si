@@ -4,6 +4,10 @@ date: 2025-08-26T10:21:05
 slug: ai-safety-vs-security-the-critical-distinction-your-organization-cant-afford-to-ignore
 categories: ["AI", "CISO", "safety", "Security"]
 tags: ["AI", "en", "governance", "safety", "security"]
+related:
+- posts/the-silent-standard-why-iso-iec-42005-could-be-your-agentic-ai-safety-net
+- pages/reference/slovene-varnost-english-translations-with-examples
+- posts/your-ai-guardrails-just-got-outsmarted-by-emojis-the-semantic-prompt-injection-crisis
 ---
 Are you treating [AI safety](https://www.ibm.com/think/topics/ai-safety) and [AI security](https://www.microsoft.com/en-us/security/business/security-101/what-is-ai-for-cybersecurity) as the same thing? If so, your organization might be missing critical vulnerabilities that could compromise both your operations and compliance posture.
 
@@ -56,9 +60,3 @@ The organizations that will thrive in the AI era are those that recognize this c
 As the OECD research suggests, understanding these differences allows organizations to better address the unique challenges each area presents, ultimately fostering a safer and more secure AI ecosystem.
 
 The question isn't whether your organization will face AI-related challenges - it's whether you'll be prepared with the right frameworks to address both safety and security concerns when they arise.
-
-/2025/08/14/the-silent-standard-why-iso-iec-42005-could-be-your-agentic-ai-safety-net/
-
-[/2025/08/03/your-ai-guardrails-just-got-outsmarted-by-emojis-the-semantic-prompt-injection-crisis/](/2025/08/03/your-ai-guardrails-just-got-outsmarted-by-emojis-the-semantic-prompt-injection-crisis/)
-
-/2025/07/21/slovene-varnost-english-translations-with-examples/

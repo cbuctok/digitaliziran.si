@@ -4,6 +4,9 @@ date: 2025-07-01T15:15:00
 slug: your-ai-procurement-strategy-could-be-your-biggest-compliance-risk-what-financial-services-must-know
 categories: ["AI", "audit", "CISO", "General", "legal"]
 tags: ["development", "DORA"]
+related:
+- posts/dora-first-why-financial-institutions-must-prioritize-ai-readiness-before-2027
+- posts/why-algorithmic-transparency-matters
 ---
 Are you rushing to procure AI solutions for your financial services firm without considering the legal minefield you're entering? While competitors scramble to deploy the latest AI tools, smart institutions are discovering that **procurement strategy - not just implementation - determines compliance success**.
 
@@ -54,7 +57,3 @@ Organizations that approach AI procurement with compliance-first thinking aren't
 The window for reactive compliance is closing rapidly. With [AI Act](https://artificialintelligenceact.eu/) enforcement approaching and [DORA](https://www.eiopa.europa.eu/digital-operational-resilience-act-dora_en) already in effect, **the procurement decisions you make today will determine your competitive position tomorrow**.
 
 Are you building your AI strategy on solid legal foundations, or are you gambling with your institution's future? The choice - and the consequences - are entirely yours.
-
-/2025/06/23/dora-first-why-financial-institutions-must-prioritize-ai-readiness-before-2027/
-
-/2025/02/28/why-algorithmic-transparency-matters/

@@ -4,6 +4,10 @@ date: 2025-06-02T08:35:28
 slug: is-your-team-ready-for-ai-why-education-must-come-before-implementation
 categories: ["AI", "ethics", "legal", "safety", "team"]
 tags: ["Atrophied and Unprepared", "en", "security", "team"]
+related:
+- posts/the-hidden-cost-of-ai-hallucinations-when-your-professional-tools-start-making-things-up
+- posts/why-algorithmic-transparency-matters
+- posts/navigating-the-ai-era-fostering-critical-thinking-in-human-ai-interactions
 ---
 Picture this: your organization just invested in cutting-edge AI technology, but your team doesn't understand how it works, when it might fail, or what legal obligations come with its use. Sound familiar? You're not alone—and you're potentially in violation of the [European AI Act](https://www.lexia.it/en/2025/05/30/ai-literacy-and-faqs/), which mandates AI literacy training as of February 2, 2025.
 
@@ -53,9 +57,3 @@ The beauty of proper AI education lies in its multiplier effect. When your team 
 As AI continues evolving rapidly, the question isn't whether your organization will use these technologies, but whether your people will be prepared to use them responsibly and effectively.
 
 **The bottom line:** In the age of mandatory AI literacy, education isn't a nice-to-have—it's your competitive edge and legal obligation. Are you ready to empower your personnel, or will you be scrambling to catch up after implementation?
-
-/2025/05/25/the-hidden-cost-of-ai-hallucinations-when-your-professional-tools-start-making-things-up/
-
-/2025/02/28/why-algorithmic-transparency-matters/
-
-/2025/04/18/navigating-the-ai-era-fostering-critical-thinking-in-human-ai-interactions/

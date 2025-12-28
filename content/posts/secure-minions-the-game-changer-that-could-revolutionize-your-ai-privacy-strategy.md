@@ -4,6 +4,10 @@ date: 2025-06-09T10:34:00
 slug: secure-minions-the-game-changer-that-could-revolutionize-your-ai-privacy-strategy
 categories: ["AI", "audit", "safety"]
 tags: ["cryptography", "en"]
+related:
+- posts/model-context-protocol-a-security-threat-masquerading-as-innovation
+- posts/thinking-about-deploying-ai-agents-read-this-first
+- posts/eus-protecteu-plan-sparks-privacy-concerns-the-hidden-cost-of-backdoored-encryption
 ---
 **Are you unknowingly exposing your sensitive data every time you use cloud-based AI?** A groundbreaking collaboration between [Ollama](https://ollama.com/blog/secureminions) and [Stanford's Hazy Research](https://hazyresearch.stanford.edu/blog/2025-05-12-security) might have just solved one of AI's most pressing privacy dilemmas.
 
@@ -90,9 +94,3 @@ The reliance on **NVIDIA's confidential computing technology** raises questions 
 - Ensure compatibility with existing compliance frameworks and regulatory requirements
 
 The future of enterprise AI will likely incorporate multiple privacy-preserving technologies rather than relying on any single solution. Organizations should approach these emerging technologies with appropriate due diligence, recognizing that **security is only as strong as its weakest component** - and that component is often not the encryption itself, but the broader system architecture and operational procedures surrounding it.
-
-/2025/04/14/model-context-protocol-a-security-threat-masquerading-as-innovation/
-
-/2025/04/02/thinking-about-deploying-ai-agents-read-this-first/
-
-/2025/04/07/eus-protecteu-plan-sparks-privacy-concerns-the-hidden-cost-of-backdoored-encryption/

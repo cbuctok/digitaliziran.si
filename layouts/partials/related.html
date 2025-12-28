@@ -1,0 +1,12 @@
+{{ if .Params.related }}
+<div class="related-posts">
+  <h3>Related</h3>
+  <ul>
+    {{ range .Params.related }}
+    {{ with $.Site.GetPage . }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

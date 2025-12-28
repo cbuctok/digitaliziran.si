@@ -4,6 +4,8 @@ date: 2025-05-31T09:05:15
 slug: white-house-health-report-scandal-exposes-the-dangers-of-unvetted-ai-in-government
 categories: ["ethics", "legal", "safety"]
 tags: ["Atrophied and Unprepared", "en", "health"]
+related:
+- posts/the-hidden-cost-of-ai-hallucinations-when-your-professional-tools-start-making-things-up
 ---
 Are you trusting AI tools to handle critical decisions in your organization? The Trump administration's recent health report debacle should serve as a wake-up call for every executive relying on artificial intelligence without proper oversight.
 
@@ -52,5 +54,3 @@ The White House's MAHA report serves as an expensive lesson in what happens when
 Are you prepared for the responsibility that comes with AI-powered decision-making?
 
 The article discusses the recent scandal involving the White House's "Make America Healthy Again" (MAHA) report, which contained fabricated citations and potentially AI-generated content. The article argues that this incident highlights the dangers of relying on unvetted AI tools in critical decision-making processes.
-
-/2025/05/25/the-hidden-cost-of-ai-hallucinations-when-your-professional-tools-start-making-things-up/

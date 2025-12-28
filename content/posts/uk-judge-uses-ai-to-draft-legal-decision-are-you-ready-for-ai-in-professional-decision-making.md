@@ -4,6 +4,9 @@ date: 2025-10-08T09:06:16
 slug: uk-judge-uses-ai-to-draft-legal-decision-are-you-ready-for-ai-in-professional-decision-making
 categories: ["AI", "legal"]
 tags: ["AI", "Atrophied and Unprepared", "en"]
+related:
+- posts/why-algorithmic-transparency-matters
+- posts/california-fines-lawyer-10000-for-chatgpt-fabrications-is-your-legal-team-ready-for-ai-accountability
 ---
 Have you ever wondered what happens when [artificial intelligence](https://www.ibm.com/think/topics/artificial-intelligence) enters the courtroom? A UK [First-Tier Tribunal](https://www.judiciary.uk/courts-and-tribunals/tribunals/first-tier-tribunal/) judge recently provided a notable answer, becoming one of the first to openly disclose using AI in drafting a judicial decision - and the implications extend far beyond the legal profession.
 
@@ -56,7 +59,3 @@ This case represents an important step in responsible AI adoption in professiona
 While we shouldn't overstate the immediate legal precedent of this First-Tier Tribunal decision, it does provide a valuable template for transparency. The legal profession is learning these lessons through high-profile cases and regulatory guidance. Will your organization be ready with appropriate safeguards when AI governance measures reach your industry?
 
 The Evans decision shows that AI can enhance professional decision-making when implemented thoughtfully. The key is building transparency, security, and human oversight into your AI strategy from the beginning - not as an afterthought.
-
-/2025/02/28/why-algorithmic-transparency-matters/
-
-/2025/09/24/california-fines-lawyer-10000-for-chatgpt-fabrications-is-your-legal-team-ready-for-ai-accountability/

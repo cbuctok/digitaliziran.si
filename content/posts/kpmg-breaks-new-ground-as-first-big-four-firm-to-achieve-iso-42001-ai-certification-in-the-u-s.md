@@ -4,6 +4,9 @@ date: 2025-11-26T10:55:28
 slug: kpmg-breaks-new-ground-as-first-big-four-firm-to-achieve-iso-42001-ai-certification-in-the-u-s
 categories: ["AI", "safety"]
 tags: ["AI", "en"]
+related:
+- posts/swedens-pm-chatgpt-scandal-exposes-critical-ai-governance-gap-why-iso-42001-is-no-longer-optional
+- posts/the-ai-security-crisis-you-cant-ignore-why-simon-willisons-lethal-trifecta-demands-immediate-action
 ---
 Is your organization prepared for the [AI governance](https://www.ibm.com/topics/ai-governance) standards that are reshaping professional services? [KPMG in the U.S. has achieved a significant milestone](https://kpmg.com/us/en/media/news/kpmg-receives-iso-ai-certification.html) by becoming the first of the [Big Four accounting firms](https://en.wikipedia.org/wiki/Big_Four_accounting_firms) in the country to receive [ISO 42001 certification](https://www.iso.org/standard/81230.html) - the world's first international standard for [Artificial Intelligence Management Systems (AIMS)](https://www.bsigroup.com/en-GB/industries-and-sectors/information-and-communication-technology/artificial-intelligence/iso-iec-42001/).
 
@@ -42,7 +45,3 @@ As [AI systems](https://www.ibm.com/topics/artificial-intelligence) become more 
 KPMG's certification achievement isn't just about one firm's compliance milestone - it's a signal that AI governance standards are moving from optional best practices to competitive necessities. Organizations that proactively embrace structured AI management frameworks aren't just avoiding risks; they're building sustainable competitive advantages through enhanced trust, better decision-making quality, and reduced operational uncertainties.
 
 The question isn't whether AI governance standards will affect your business - it's whether you'll be ready when they become industry expectations.
-
-/2025/08/08/swedens-pm-chatgpt-scandal-exposes-critical-ai-governance-gap-why-iso-42001-is-no-longer-optional/
-
-/2025/08/27/the-ai-security-crisis-you-cant-ignore-why-simon-willisons-lethal-trifecta-demands-immediate-action/

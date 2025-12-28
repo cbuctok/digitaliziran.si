@@ -4,6 +4,10 @@ date: 2025-09-05T16:40:51
 slug: your-llm-servers-are-exposed-ciscos-shodan-study-reveals-critical-security-gaps
 categories: ["AI", "configuration"]
 tags: ["AI", "configuration", "development"]
+related:
+- posts/the-ai-security-crisis-you-cant-ignore-why-simon-willisons-lethal-trifecta-demands-immediate-action
+- posts/your-ai-guardrails-just-got-outsmarted-by-emojis-the-semantic-prompt-injection-crisis
+- posts/amazons-ai-assistant-nearly-wiped-developer-systems-for-5-days-are-your-access-controls-ready
 ---
 Are your organization's [Large Language Model (LLM)](https://en.wikipedia.org/wiki/Large_language_model) servers broadcasting sensitive information to the entire internet? A new [Cisco security study](https://blogs.cisco.com/security/detecting-exposed-llm-servers-shodan-case-study-on-ollama) using [Shodan search engine](https://www.shodan.io/) data reveals a troubling reality: thousands of [Ollama](https://ollama.ai/) LLM servers are running with misconfigured settings, creating potential entry points for attackers.
 
@@ -66,9 +70,3 @@ The key takeaway from Cisco's research isn't that Ollama has inherent security f
 When organizations need remote access to their LLM services, they often take the path of least resistance by simply changing the binding address without implementing the additional security layers that external exposure requires. This creates a false sense of security where administrators believe they're just "enabling remote access" when they're actually exposing critical infrastructure to the internet.
 
 Implementing these security recommendations isn't just about protecting your current AI investments - it's about building a foundation for trustworthy AI deployment that can scale with your organization's growing reliance on these technologies while maintaining the security posture that both Ollama's developers and your security team intended.
-
-/2025/08/27/the-ai-security-crisis-you-cant-ignore-why-simon-willisons-lethal-trifecta-demands-immediate-action/
-
-/2025/08/03/your-ai-guardrails-just-got-outsmarted-by-emojis-the-semantic-prompt-injection-crisis/
-
-/2025/07/29/amazons-ai-assistant-nearly-wiped-developer-systems-for-5-days-are-your-access-controls-ready/

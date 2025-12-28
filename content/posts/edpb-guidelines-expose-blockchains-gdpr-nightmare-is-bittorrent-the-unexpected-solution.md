@@ -4,6 +4,9 @@ date: 2025-06-24T08:32:04
 slug: edpb-guidelines-expose-blockchains-gdpr-nightmare-is-bittorrent-the-unexpected-solution
 categories: ["development", "GDPR", "General", "Legal", "research"]
 tags: ["blockchain", "cryptography", "EDPB", "en"]
+related:
+- posts/nyt-v-openai-why-your-data-privacy-may-be-at-risk-even-after-you-hit-delete
+- posts/eu-court-rules-tracking-based-advertising-illegal-major-blow-to-google-microsoft-amazon
 ---
 Are you building on [blockchain technology](https://www.investopedia.com/terms/b/blockchain.asp) without considering the privacy compliance minefield you're walking into? The [European Data Protection Board's (EDPB)](https://edpb.europa.eu/) latest guidelines reveal a fundamental incompatibility between blockchain's core features and [GDPR](https://gdpr.eu/what-is-gdpr/) requirements that could derail your digital transformation plans.
 
@@ -50,7 +53,3 @@ The EDPB guidelines aren't just theoretical concerns - they represent enforceabl
 **The good news is that the technology is adapting.** [Recent research](https://academic.oup.com/cybersecurity/article/11/1/tyaf002/8024082) shows promising developments in blockchain privacy solutions, including advanced cryptographic techniques like [zero-knowledge proofs](https://ethereum.org/en/zero-knowledge-proofs/) and [chameleon hashes](https://link.springer.com/chapter/10.1007/978-3-540-45146-4_7) that can enable selective data modification while preserving blockchain integrity.
 
 As blockchain technology evolves, the tension between transparency and privacy is being actively addressed through innovation rather than abandonment. The question isn't whether blockchain will adapt to GDPR - it's whether your organization can leverage these emerging solutions to maintain compliance while capturing blockchain's transformative benefits today.
-
-/2025/06/08/nyt-v-openai-why-your-data-privacy-may-be-at-risk-even-after-you-hit-delete/
-
-/2025/05/15/eu-court-rules-tracking-based-advertising-illegal-major-blow-to-google-microsoft-amazon/

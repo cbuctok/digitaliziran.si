@@ -4,6 +4,10 @@ date: 2025-07-22T08:00:35
 slug: eus-new-ai-code-of-practice-are-you-ready-for-august-2025s-compliance-reality-check
 categories: ["AI", "ethics", "legal"]
 tags: ["en", "EU AI Act", "fairness", "transparency"]
+related:
+- posts/your-ai-procurement-strategy-could-be-your-biggest-compliance-risk-what-financial-services-must-know
+- posts/why-algorithmic-transparency-matters
+- posts/dora-first-why-financial-institutions-must-prioritize-ai-readiness-before-2027
 ---
 Is your organization prepared for the seismic shift coming to AI governance this August? The European Commission has just published its voluntary [General-Purpose AI Code of Practice (GPAI-CoP)](https://digital-strategy.ec.europa.eu/en/policies/contents-code-gpai), and while "voluntary" might sound reassuring, the practical reality is far more complex.
 
@@ -66,9 +70,3 @@ While the AI Act presents new challenges, organizations shouldn't feel they're s
 Are you building your AI strategy on solid regulatory foundations, or are you gambling with your organization's future? The choice - and the consequences - are entirely yours.
 
 But remember: **you're not alone** in this journey, and the tools and frameworks to succeed are increasingly available.
-
-/2025/07/01/your-ai-procurement-strategy-could-be-your-biggest-compliance-risk-what-financial-services-must-know/
-
-/2025/02/28/why-algorithmic-transparency-matters/
-
-/2025/06/23/dora-first-why-financial-institutions-must-prioritize-ai-readiness-before-2027/

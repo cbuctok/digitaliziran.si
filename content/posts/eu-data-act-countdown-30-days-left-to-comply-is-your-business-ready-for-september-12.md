@@ -4,6 +4,10 @@ date: 2025-08-14T07:13:04
 slug: eu-data-act-countdown-30-days-left-to-comply-is-your-business-ready-for-september-12
 categories: ["CISO", "Legal"]
 tags: ["azure", "blockchain", "configuration", "customer engagement", "en", "EU Data Act", "hardware", "iot", "privacy"]
+related:
+- posts/microsoft-admits-it-cannot-guarantee-eu-data-sovereignty-is-your-organization-at-risk
+- posts/your-work-emails-are-personal-data-the-gdpr-ruling-that-changes-everything
+- posts/edpb-guidelines-expose-blockchains-gdpr-nightmare-is-bittorrent-the-unexpected-solution
 ---
 Are you prepared for the most significant data regulation since [GDPR](https://gdpr.eu/what-is-gdpr/)? With just 30 days remaining until the [EU Data Act](https://www.loyensloeff.com/insights/news--events/news/the-eu-data-act-takes/) becomes applicable on September 12, 2025, companies across Europe are scrambling to understand requirements that will fundamentally reshape how they handle [connected device](https://www.arm.com/glossary/connected-devices) data.
 
@@ -72,9 +76,3 @@ As the digital landscape continues evolving with regulations like the [GDPR emai
 - **[Cloud Computing](https://aws.amazon.com/what-is-cloud-computing/)**: On-demand delivery of computing services over the internet
 
 - **[Interoperability](https://en.wikipedia.org/wiki/Interoperability)**: The ability of different systems to work together and exchange information
-
-/2025/07/30/microsoft-admits-it-cannot-guarantee-eu-data-sovereignty-is-your-organization-at-risk/
-
-/2025/06/26/your-work-emails-are-personal-data-the-gdpr-ruling-that-changes-everything/
-
-/2025/06/24/edpb-guidelines-expose-blockchains-gdpr-nightmare-is-bittorrent-the-unexpected-solution/

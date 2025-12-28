@@ -13,6 +13,8 @@
   {{ .Content }}
 </content>
 
+{{ partial "related.html" . }}
+
 {{ if (.Param "enablePostNavigator")}}
 {{- partial "post_navigator.html" . -}}
 {{ end }}

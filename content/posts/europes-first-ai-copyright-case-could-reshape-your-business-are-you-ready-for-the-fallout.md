@@ -4,6 +4,9 @@ date: 2025-07-08T12:10:00
 slug: europes-first-ai-copyright-case-could-reshape-your-business-are-you-ready-for-the-fallout
 categories: ["AI", "legal", "Legal"]
 tags: ["Atrophied and Unprepared", "en", "ICT risk management", "insurance"]
+related:
+- posts/why-algorithmic-transparency-matters
+- posts/the-hidden-cost-of-ai-hallucinations-when-your-professional-tools-start-making-things-up
 ---
 Is your company using AI tools to generate content, analyze data, or automate processes? The [European Court of Justice (ECJ)](https://european-union.europa.eu/institutions-law-budget/institutions-and-bodies/search-all-eu-institutions-and-bodies/court-justice-european-union-cjeu_en) has just received its first referral concerning [artificial intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence) and [copyright law](https://www.copyright.gov/what-is-copyright/) - and the outcome could fundamentally change how you operate.
 
@@ -46,7 +49,3 @@ Don't wait until 2027 for clarity. Start preparing today by:
 - **Establishing clear AI governance policies**: Create frameworks for responsible AI use
 
 The ECJ's ruling will set the precedent for AI and copyright across Europe, potentially influencing global standards. The question isn't whether this will affect your business - it's whether you'll be prepared when it does.
-
-/2025/02/28/why-algorithmic-transparency-matters/
-
-/2025/05/25/the-hidden-cost-of-ai-hallucinations-when-your-professional-tools-start-making-things-up/

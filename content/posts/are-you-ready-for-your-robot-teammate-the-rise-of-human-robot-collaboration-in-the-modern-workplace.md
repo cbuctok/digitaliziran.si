@@ -4,6 +4,9 @@ date: 2025-09-02T18:03:00
 slug: are-you-ready-for-your-robot-teammate-the-rise-of-human-robot-collaboration-in-the-modern-workplace
 categories: ["AI", "ethics", "safety"]
 tags: ["AI", "development"]
+related:
+- posts/the-automation-paradox-when-machines-make-humans-more-crucial
+- posts/the-generative-leap-echoes-of-automation-in-the-age-of-ai
 ---
 Picture this: You walk into your office tomorrow and meet your new colleague - a [collaborative robot](https://www.epicor.com/en-us/blog/technology-and-data/the-role-of-cobots-in-enhancing-workplace-safety/), or "cobot," designed to work alongside you. This isn't science fiction; it's the reality of [Industry 5.0](https://www.sciencedirect.com/science/article/pii/S1877050924003223), where human-robot collaboration is transforming workplaces across manufacturing, healthcare, and service industries.
 
@@ -74,7 +77,3 @@ Successful human-robot collaboration requires strategic planning, comprehensive 
 The future workplace isn't about humans versus robots - it's about humans **with** robots, creating teams that leverage the best of both worlds. However, this transformation requires careful consideration of safety concerns, substantial investment in infrastructure and training, and realistic timelines for implementation.
 
 The question isn't whether human-robot collaboration will impact your industry - it's whether you'll approach this transformation with the thorough preparation and realistic expectations necessary for success.
-
-/2025/03/28/the-automation-paradox-when-machines-make-humans-more-crucial/
-
-/2025/04/04/the-generative-leap-echoes-of-automation-in-the-age-of-ai/

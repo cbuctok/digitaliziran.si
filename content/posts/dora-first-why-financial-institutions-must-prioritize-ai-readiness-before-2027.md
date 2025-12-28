@@ -4,6 +4,9 @@ date: 2025-06-23T09:50:48
 slug: dora-first-why-financial-institutions-must-prioritize-ai-readiness-before-2027
 categories: ["AI", "CISO", "legal", "Legal", "Security"]
 tags: ["DORA", "en", "EU AI Act", "ICT risk management"]
+related:
+- posts/why-algorithmic-transparency-matters
+- posts/is-your-team-ready-for-ai-why-education-must-come-before-implementation
 ---
 Are you prepared for the regulatory storm heading toward financial services? While your competitors scramble to understand the [EU AI Act](https://www.artificial-intelligence-act.com/), smart institutions are taking a "DORA first" approach - and it might be the difference between thriving and merely surviving the 2027 compliance deadline.
 
@@ -64,7 +67,3 @@ While compliance might seem like a burden, early adopters are discovering signif
 The question isn't whether you'll need to comply with both DORA and the AI Act- it's whether you'll be ready when full enforcement arrives in 2027. Those taking a "DORA first" approach today are positioning themselves not just for compliance, but for competitive advantage in an AI-driven financial services landscape.
 
 **Are you building on solid foundations, or are you planning to construct your AI compliance framework on shifting sand?**
-
-/2025/02/28/why-algorithmic-transparency-matters/
-
-/2025/06/02/is-your-team-ready-for-ai-why-education-must-come-before-implementation/

@@ -4,6 +4,9 @@ date: 2025-06-24T16:33:37
 slug: mcps-hidden-security-crisis-why-your-ai-automation-strategy-needs-an-urgent-reality-check
 categories: ["AI", "CISO", "development", "General", "safety", "Security"]
 tags: ["Atrophied and Unprepared", "configuration", "development"]
+related:
+- posts/model-context-protocol-a-security-threat-masquerading-as-innovation
+- posts/thinking-about-deploying-ai-agents-read-this-first
 ---
 Are you rushing to implement [Model Context Protocol (MCP)](https://www.anthropic.com/news/model-context-protocol) for your AI automation workflows? Before you do, consider this sobering reality: [MCP may be creating more security vulnerabilities than it solves](https://blog.sshh.io/p/everything-wrong-with-mcp).
 
@@ -62,7 +65,3 @@ MCP isn't inherently evil – it's an evolving protocol that needs careful handl
 The AI automation revolution is real, but it shouldn't come at the expense of your organization's security posture. As we've learned from countless technology adoptions, the companies that balance innovation with security considerations – while staying informed about ongoing improvements – are the ones that thrive long-term.
 
 Are you prepared to navigate MCP's security challenges while leveraging the community's ongoing efforts to improve the protocol, or will you become another cautionary tale in the AI adoption playbook?
-
-/2025/04/14/model-context-protocol-a-security-threat-masquerading-as-innovation/
-
-/2025/04/02/thinking-about-deploying-ai-agents-read-this-first/

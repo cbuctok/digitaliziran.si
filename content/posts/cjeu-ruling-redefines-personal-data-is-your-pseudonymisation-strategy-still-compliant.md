@@ -4,6 +4,9 @@ date: 2025-09-24T10:25:00
 slug: cjeu-ruling-redefines-personal-data-is-your-pseudonymisation-strategy-still-compliant
 categories: ["GDPR", "Legal"]
 tags: ["AI"]
+related:
+- posts/eu-court-ruling-redefines-pseudonymized-data-is-your-companys-privacy-strategy-still-valid
+- posts/your-work-emails-are-personal-data-the-gdpr-ruling-that-changes-everything
 ---
 Are you certain your pseudonymised data transfers comply with [GDPR](https://gdpr-info.eu/)? A significant ruling from the Court of Justice of the European Union (CJEU) on September 4, 2025, has provided important clarification on when pseudonymised data qualifies as [personal data](https://gdpr-info.eu/issues/personal-data/) - and the implications could refine your data management strategy.
 
@@ -52,7 +55,3 @@ As [privacy experts note](https://www.globalprivacyblog.com/2025/09/cjeu-confirm
 **The question isn't whether this ruling revolutionizes GDPR compliance - it's whether you're prepared to apply the Court's clarified interpretation to your specific data processing scenarios.** Organizations that thoughtfully reassess their pseudonymisation strategies using the Court's refined framework will be better positioned for both compliance and legitimate business innovation.
 
 The ruling represents an evolution in understanding rather than a revolution, providing clearer guidance on applying established GDPR principles to the complex realities of modern data processing.
-
-/2025/09/08/eu-court-ruling-redefines-pseudonymized-data-is-your-companys-privacy-strategy-still-valid/
-
-/2025/06/26/your-work-emails-are-personal-data-the-gdpr-ruling-that-changes-everything/

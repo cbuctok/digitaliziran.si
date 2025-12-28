@@ -4,6 +4,9 @@ date: 2025-09-19T11:57:35
 slug: why-your-ai-startup-needs-aviation-grade-regulation-lessons-from-100-years-of-flight-safety
 categories: ["AI", "regualtion"]
 tags: ["AI", "development", "en"]
+related:
+- posts/your-ai-procurement-strategy-could-be-your-biggest-compliance-risk-what-financial-services-must-know
+- posts/the-silent-standard-why-iso-iec-42005-could-be-your-agentic-ai-safety-net
 ---
 Are you building your AI startup without considering the regulatory framework that could make or break your venture? While entrepreneurs rush to deploy the latest artificial intelligence solutions, the smartest founders are looking to an unexpected mentor: the aviation industry.
 
@@ -90,7 +93,3 @@ Start by:
 The question isn't whether AI will face aviation-level regulation - it's whether your startup will implement the right level of safety measures for your specific AI application. The companies that survive and thrive will be those that learned from aviation's principles while recognizing AI's unique challenges and opportunities.
 
 Are you building your AI startup with appropriate safety measures, or are you gambling with inadequate oversight? The choice - and the regulatory future - is in your hands.
-
-/2025/07/01/your-ai-procurement-strategy-could-be-your-biggest-compliance-risk-what-financial-services-must-know/
-
-/2025/08/14/the-silent-standard-why-iso-iec-42005-could-be-your-agentic-ai-safety-net/

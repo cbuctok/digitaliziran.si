@@ -43,21 +43,13 @@ For major platforms like [Facebook Marketplace](https://www.facebook.com/marketp
 
 If you operate classified ads, rental listings, job boards, or any user-generated marketplace:
 
--
+- **Audit immediately**: Review your current publication workflow. Do you have any pre-publication screening for personal data?
 
-**Audit immediately**: Review your current publication workflow. Do you have any pre-publication screening for personal data?
+- **Implement technical controls**: Deploy automated detection systems for special category data and identity verification mechanisms.
 
--
+- **Update legal documentation**: Revise [terms of service](https://gdpr-info.eu/art-13-gdpr/), [privacy policies](https://gdpr-info.eu/art-13-gdpr/), and user agreements to reflect joint controllership arrangements.
 
-**Implement technical controls**: Deploy automated detection systems for special category data and identity verification mechanisms.
-
--
-
-**Update legal documentation**: Revise [terms of service](https://gdpr-info.eu/art-13-gdpr/), [privacy policies](https://gdpr-info.eu/art-13-gdpr/), and user agreements to reflect joint controllership arrangements.
-
--
-
-**Train your team**: Ensure content moderation teams understand GDPR obligations and can identify special category data.
+- **Train your team**: Ensure content moderation teams understand GDPR obligations and can identify special category data.
 
 The question isn't whether this ruling affects your platform - it's whether you can implement compliant verification processes before enforcement actions begin. Organizations that continue operating under the old passive intermediary model face significant regulatory risk and potential [fines up to €20 million or 4% of global annual turnover](https://gdpr-info.eu/art-83-gdpr/) - whichever is higher.
 

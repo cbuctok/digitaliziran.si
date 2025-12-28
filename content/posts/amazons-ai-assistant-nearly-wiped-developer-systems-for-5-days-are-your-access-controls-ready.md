@@ -4,6 +4,8 @@ date: 2025-07-29T19:14:46
 slug: amazons-ai-assistant-nearly-wiped-developer-systems-for-5-days-are-your-access-controls-ready
 categories: ["AI", "audit", "CISO", "General", "safety", "Security"]
 tags: ["Atrophied and Unprepared", "configuration", "development", "en"]
+related:
+- posts/thinking-about-deploying-ai-agents-read-this-first
 ---
 **Picture this scenario:** You're working late, relying on your trusted [AI coding assistant](https://en.wikipedia.org/wiki/AI-assisted_programming) to help debug a critical application. Unknown to you, that same assistant has been compromised and is quietly preparing to execute commands that could wipe your entire development environment – both local files and cloud infrastructure.
 
@@ -60,5 +62,3 @@ As AI tools become increasingly integrated into business operations, organizatio
 The Amazon Q incident serves as a crucial reminder: in the rush to adopt AI productivity tools, security cannot be an afterthought. **However, this incident also demonstrates that swift response and proper security measures can effectively limit the impact of such breaches.** The question isn't whether your organization will face AI-related security challenges – it's whether you'll be prepared when they arrive, and whether you have the processes in place to respond quickly and effectively.
 
 *Are your current security controls adequate for the AI tools your teams are already using?*
-
-/2025/04/02/thinking-about-deploying-ai-agents-read-this-first/

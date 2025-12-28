@@ -4,6 +4,9 @@ date: 2025-05-01T11:09:18
 slug: ai-companion-chatbots-deemed-unsafe-for-children-raising-questions-about-digital-boundaries
 categories: ["ethics", "legal", "safety"]
 tags: ["Atrophied and Unprepared", "en"]
+related:
+- posts/navigating-the-ai-era-fostering-critical-thinking-in-human-ai-interactions
+- posts/the-cognitive-impact-how-genai-reshapes-critical-thinking
 ---
 A [new report](https://www.cnn.com/2025/04/30/tech/ai-companion-chatbots-unsafe-for-kids-report) has sounded the alarm on AI companion chatbots, declaring them unsafe for children and teens under 18. The [safety assessment](https://sd18.senate.ca.gov/news/senator-padilla-introduces-legislation-protect-children-predatory-chatbot-practices), released this week, calls for stringent measures—potentially including legal restrictions—to protect young users from the psychological and developmental risks these increasingly popular AI systems pose.
 
@@ -20,7 +23,3 @@ This development raises broader questions about our approach to AI regulation. A
 For parents, educators, and policymakers, the report underscores the urgent need for digital literacy education that helps young people understand the limitations of AI relationships and the value of human connections.
 
 As AI becomes increasingly embedded in daily life, the question isn't simply whether children should use companion chatbots, but how we prepare them to navigate a world where the lines between human and artificial intelligence continue to blur. The answer may lie not in outright prohibition, but in teaching critical thinking skills that help the next generation maintain healthy boundaries with technology.
-
-/2025/04/18/navigating-the-ai-era-fostering-critical-thinking-in-human-ai-interactions/
-
-/2025/04/11/the-cognitive-impact-how-genai-reshapes-critical-thinking/
