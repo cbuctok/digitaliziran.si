@@ -8,7 +8,7 @@ theme = 'hugo-bearblog'
   favicon = "/favicon.ico"
 
 [permalinks]
-  posts = '/:slug/'
+  posts = '/:year/:month/:day/:slug/'
   'pages/tools' = '/pages/tools/:slug/'
   'pages/reference' = '/pages/reference/:slug/'
   'pages/services' = '/pages/services/:slug/'
