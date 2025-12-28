@@ -1,4 +1,4 @@
-baseURL = 'https://digitaliziran.si/'
+baseURL = 'https://cbuctok.github.io/digitaliziran.si/'
 languageCode = 'en'
 title = 'Digitaliziran'
 theme = 'hugo-bearblog'

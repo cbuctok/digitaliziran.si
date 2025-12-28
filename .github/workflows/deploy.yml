@@ -11,6 +11,10 @@ jobs:
     runs-on: ubuntu-latest
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
+    permissions:
+      contents: write
+      pages: write
+      id-token: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -46,6 +50,7 @@ jobs:
           allow_empty_commit: false
           user_name: 'github-actions[bot]'
           user_email: 'github-actions[bot]@users.noreply.github.com'
+          commit_message: 'Deploy Hugo site to GitHub Pages'
 
       - name: Output deployment info
         run: echo "Site deployed to GitHub Pages!"
