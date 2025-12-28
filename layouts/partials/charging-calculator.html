@@ -1,0 +1,617 @@
+<style>
+    .charging-calculator {
+        all: initial;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    .charging-calculator * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .charging-calculator .calc-body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+    .charging-calculator .container {
+        max-width: 800px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        overflow: hidden;
+    }
+    .charging-calculator .content {
+        padding: 30px;
+    }
+    .charging-calculator .settings-panel {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+    .charging-calculator .settings-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-bottom: 25px;
+    }
+    .charging-calculator .settings-row.three-col {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    @media (max-width: 768px) {
+        .charging-calculator .settings-row {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .charging-calculator .settings-row.three-col {
+            grid-template-columns: 1fr;
+        }
+    }
+    .charging-calculator .input-group {
+        display: flex;
+        flex-direction: column;
+    }
+    .charging-calculator .input-group label {
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 8px;
+    }
+    .charging-calculator .input-group input[type="number"] {
+        padding: 12px;
+        border: 2px solid #e5e7eb;
+        border-radius: 8px;
+        font-size: 1rem;
+        transition: border-color 0.2s;
+    }
+    .charging-calculator .input-group input[type="number"]:focus {
+        outline: none;
+        border-color: #4f46e5;
+    }
+    .charging-calculator .slider-group {
+        display: flex;
+        flex-direction: column;
+    }
+    .charging-calculator .slider-group label {
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 8px;
+    }
+    .charging-calculator .slider {
+        width: 100%;
+        height: 8px;
+        border-radius: 4px;
+        background: #e5e7eb;
+        outline: none;
+        margin-bottom: 8px;
+        cursor: pointer;
+        appearance: none;
+    }
+    .charging-calculator .slider::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #4f46e5;
+        cursor: pointer;
+    }
+    .charging-calculator .slider::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #4f46e5;
+        cursor: pointer;
+        border: none;
+    }
+    .charging-calculator .slider-labels {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        color: #6b7280;
+    }
+    .charging-calculator .battery-visual {
+        margin-top: 20px;
+    }
+    .charging-calculator .battery-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 8px;
+    }
+    .charging-calculator .battery-bar {
+        width: 100%;
+        height: 24px;
+        background: #e5e7eb;
+        border-radius: 12px;
+        overflow: hidden;
+        position: relative;
+    }
+    .charging-calculator .battery-current {
+        height: 100%;
+        background: linear-gradient(90deg, #10b981, #059669);
+        border-radius: 12px;
+        transition: width 0.3s ease;
+    }
+    .charging-calculator .battery-charge {
+        height: 100%;
+        background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+        position: absolute;
+        top: 0;
+        transition: all 0.3s ease;
+    }
+    .charging-calculator .battery-labels {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.8rem;
+        color: #6b7280;
+        margin-top: 4px;
+    }
+    .charging-calculator .results-section {
+        margin-top: 30px;
+    }
+    .charging-calculator .results-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .charging-calculator .cost-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .charging-calculator .cost-card {
+        border: 2px solid #e5e7eb;
+        border-radius: 12px;
+        padding: 20px;
+        background: white;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+    .charging-calculator .cost-card:hover {
+        border-color: #d1d5db;
+        transform: translateY(-2px);
+    }
+    .charging-calculator .cost-card.best {
+        border-color: #10b981;
+        background: #ecfdf5;
+        transform: scale(1.02);
+    }
+    .charging-calculator .cost-card.best::before {
+        content: 'Best Choice';
+        position: absolute;
+        top: -10px;
+        right: 15px;
+        background: #10b981;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    .charging-calculator .provider-header {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-bottom: 15px;
+    }
+    .charging-calculator .provider-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+    }
+    .charging-calculator .provider-dot.petrol { background: #3b82f6; }
+    .charging-calculator .provider-dot.optimised { background: #10b981; }
+    .charging-calculator .provider-dot.boost { background: #f59e0b; }
+    .charging-calculator .provider-name {
+        font-weight: 600;
+        color: #374151;
+        font-size: 0.9rem;
+    }
+    .charging-calculator .total-cost {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #111827;
+        margin-bottom: 12px;
+    }
+    .charging-calculator .cost-breakdown {
+        font-size: 0.9rem;
+        color: #6b7280;
+        line-height: 1.4;
+    }
+    .charging-calculator .savings {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        color: #ef4444;
+        font-size: 0.8rem;
+        margin-top: 8px;
+    }
+    .charging-calculator .recommendation {
+        background: linear-gradient(135deg, #dbeafe, #e0f2fe);
+        border-left: 4px solid #3b82f6;
+        padding: 20px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
+    .charging-calculator .recommendation h3 {
+        color: #1e40af;
+        font-weight: 600;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .charging-calculator .recommendation-text {
+        color: #374151;
+        line-height: 1.6;
+    }
+    .charging-calculator .quick-guide {
+        background: #f8fafc;
+        padding: 20px;
+        border-radius: 8px;
+    }
+    .charging-calculator .quick-guide h3 {
+        font-weight: 600;
+        color: #374151;
+        margin-bottom: 15px;
+    }
+    .charging-calculator .guide-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+    @media (max-width: 768px) {
+        .charging-calculator .guide-grid {
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+    }
+    .charging-calculator .guide-section h4 {
+        font-weight: 600;
+        margin-bottom: 8px;
+    }
+    .charging-calculator .guide-section.petrol h4 { color: #3b82f6; }
+    .charging-calculator .guide-section.optimised h4 { color: #10b981; }
+    .charging-calculator .guide-section.boost h4 { color: #f59e0b; }
+    .charging-calculator .guide-section ul {
+        list-style: none;
+        color: #6b7280;
+        font-size: 0.9rem;
+    }
+    .charging-calculator .guide-section li {
+        margin-bottom: 4px;
+    }
+    .charging-calculator .guide-section li::before {
+        content: '• ';
+        font-weight: bold;
+    }
+    .charging-calculator .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+    .charging-calculator .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+    .charging-calculator .toggle-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        transition: .4s;
+        border-radius: 34px;
+    }
+    .charging-calculator .toggle-slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        transition: .4s;
+        border-radius: 50%;
+    }
+    .charging-calculator input:checked + .toggle-slider {
+        background-color: #4f46e5;
+    }
+    .charging-calculator input:checked + .toggle-slider:before {
+        transform: translateX(26px);
+    }
+    .charging-calculator .vat-info {
+        font-size: 0.8rem;
+        color: #6b7280;
+        margin-top: 4px;
+    }
+    .charging-calculator .no-charge {
+        text-align: center;
+        padding: 40px;
+        color: #6b7280;
+    }
+    .charging-calculator .footer {
+        text-align: center;
+        padding: 20px;
+        color: #6b7280;
+        font-size: 0.9rem;
+        border-top: 1px solid #e5e7eb;
+    }
+</style>
+
+<div class="charging-calculator">
+    <div class="calc-body">
+        <div class="container">
+            <div class="content">
+                <div class="settings-panel">
+                    <div class="settings-row">
+                        <div class="input-group">
+                            <label for="batteryCapacity">Battery Capacity (kWh):</label>
+                            <input type="number" id="batteryCapacity" value="6.0" min="1" max="200" step="0.1">
+                            <small style="color: #6b7280; margin-top: 4px;">Enter your vehicle's usable battery capacity</small>
+                        </div>
+                        <div class="input-group">
+                            <label for="vatToggle">Include VAT (DDV 22%):</label>
+                            <div style="display: flex; align-items: center; gap: 12px; margin-top: 8px;">
+                                <span style="font-size: 0.9rem; color: #6b7280;">w/o VAT</span>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" id="vatToggle" checked>
+                                    <span class="toggle-slider"></span>
+                                </label>
+                                <span style="font-size: 0.9rem; color: #6b7280;">with VAT</span>
+                            </div>
+                            <small style="color: #6b7280; margin-top: 4px; display: block;">Companies can often deduct VAT</small>
+                        </div>
+                    </div>
+
+                    <div class="settings-row">
+                        <div class="slider-group">
+                            <label for="currentBattery">Current Battery Level: <span id="currentBatteryValue">20</span>%</label>
+                            <input type="range" id="currentBattery" class="slider" min="0" max="100" value="20">
+                            <div class="slider-labels">
+                                <span>0%</span>
+                                <span>50%</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                        <div class="slider-group">
+                            <label for="targetBattery">Target Battery Level: <span id="targetBatteryValue">100</span>%</label>
+                            <input type="range" id="targetBattery" class="slider" min="0" max="100" value="100">
+                            <div class="slider-labels">
+                                <span>0%</span>
+                                <span>50%</span>
+                                <span>100%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="battery-visual">
+                        <div class="battery-info">
+                            <span>🔋</span>
+                            <strong id="chargeInfo">Charging: 80% (4.80 kWh)</strong>
+                        </div>
+                        <div class="battery-bar">
+                            <div class="battery-current" id="batteryCurrentBar" style="width: 20%;"></div>
+                            <div class="battery-charge" id="batteryChargeBar" style="left: 20%; width: 80%;"></div>
+                        </div>
+                        <div class="battery-labels">
+                            <span id="currentLabel">Current: 20%</span>
+                            <span id="targetLabel">Target: 100%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="noChargeMessage" class="no-charge" style="display: none;">
+                    🔋 Please set target battery level higher than current level
+                </div>
+
+                <div id="resultsSection" style="display: block;">
+                    <div class="results-title">📊 Charging Cost Comparison</div>
+                    <div id="costCards" class="cost-cards"></div>
+                    <div id="recommendation" class="recommendation"></div>
+
+                    <div class="quick-guide">
+                        <h3>Quick Guide:</h3>
+                        <div class="guide-grid">
+                            <div class="guide-section petrol">
+                                <h4>Use Petrol when:</h4>
+                                <ul>
+                                    <li>Small charging sessions</li>
+                                    <li>Quick top-ups</li>
+                                    <li>No connection fee needed</li>
+                                </ul>
+                            </div>
+                            <div class="guide-section optimised">
+                                <h4>Use OPTIMISED when:</h4>
+                                <ul>
+                                    <li>Larger charging sessions</li>
+                                    <li>Cost-effective for most scenarios</li>
+                                    <li>Balanced speed and price</li>
+                                </ul>
+                            </div>
+                            <div class="guide-section boost">
+                                <h4>Use BOOST when:</h4>
+                                <ul>
+                                    <li>Need maximum charging speed</li>
+                                    <li>Time is more important than cost</li>
+                                    <li>Compatible with high-speed charging</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                🇸🇮 Slovenia Type 2 AC Charging Cost Calculator | Includes VAT toggle for company vehicles | Prices may vary by provider and location
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const VAT_RATE = 0.22;
+    const pricingBase = {
+        petrol: {
+            name: "Petrol",
+            connectionFeeNoVat: 0,
+            perKwhFeeNoVat: 0.3032,
+            note: "No connection fee"
+        },
+        electroOptimised: {
+            name: "Electro Ljubljana (OPTIMISED)",
+            connectionFeeNoVat: 0.50,
+            perKwhFeeNoVat: 0.22,
+            note: "Best balance of speed and cost"
+        },
+        electroBoost: {
+            name: "Electro Ljubljana (BOOST)",
+            connectionFeeNoVat: 0.50,
+            perKwhFeeNoVat: 0.35,
+            note: "Fastest charging speed"
+        }
+    };
+
+    let currentBattery = 20;
+    let targetBattery = 100;
+    let batteryCapacity = 6.0;
+    let includeVat = true;
+
+    const elements = {
+        currentBatterySlider: document.getElementById('currentBattery'),
+        targetBatterySlider: document.getElementById('targetBattery'),
+        batteryCapacityInput: document.getElementById('batteryCapacity'),
+        vatToggle: document.getElementById('vatToggle'),
+        currentBatteryValue: document.getElementById('currentBatteryValue'),
+        targetBatteryValue: document.getElementById('targetBatteryValue'),
+        chargeInfo: document.getElementById('chargeInfo'),
+        batteryCurrentBar: document.getElementById('batteryCurrentBar'),
+        batteryChargeBar: document.getElementById('batteryChargeBar'),
+        currentLabel: document.getElementById('currentLabel'),
+        targetLabel: document.getElementById('targetLabel'),
+        resultsSection: document.getElementById('resultsSection'),
+        noChargeMessage: document.getElementById('noChargeMessage'),
+        costCards: document.getElementById('costCards'),
+        recommendation: document.getElementById('recommendation')
+    };
+
+    function getPricingWithVat() {
+        const pricing = {};
+        Object.entries(pricingBase).forEach(([key, option]) => {
+            pricing[key] = {
+                name: option.name,
+                connectionFee: includeVat ? option.connectionFeeNoVat * (1 + VAT_RATE) : option.connectionFeeNoVat,
+                perKwhFee: includeVat ? option.perKwhFeeNoVat * (1 + VAT_RATE) : option.perKwhFeeNoVat,
+                note: option.note
+            };
+        });
+        return pricing;
+    }
+
+    function updateValues() {
+        currentBattery = parseInt(elements.currentBatterySlider.value);
+        targetBattery = parseInt(elements.targetBatterySlider.value);
+        const capacityInput = parseFloat(elements.batteryCapacityInput.value);
+        batteryCapacity = isNaN(capacityInput) || capacityInput <= 0 ? 6.0 : capacityInput;
+        includeVat = elements.vatToggle.checked;
+
+        elements.currentBatteryValue.textContent = currentBattery;
+        elements.targetBatteryValue.textContent = targetBattery;
+        elements.currentLabel.textContent = 'Current: ' + currentBattery + '%';
+        elements.targetLabel.textContent = 'Target: ' + targetBattery + '%';
+
+        const chargePercentage = targetBattery - currentBattery;
+        const energyNeeded = batteryCapacity * (chargePercentage / 100);
+        const vatText = includeVat ? ' (with VAT)' : ' (w/o VAT)';
+        elements.chargeInfo.textContent = 'Charging: ' + chargePercentage + '% (' + energyNeeded.toFixed(2) + ' kWh)' + vatText;
+
+        elements.batteryCurrentBar.style.width = currentBattery + '%';
+        elements.batteryChargeBar.style.left = currentBattery + '%';
+        elements.batteryChargeBar.style.width = Math.max(0, chargePercentage) + '%';
+
+        calculateAndDisplayResults();
+    }
+
+    function calculateAndDisplayResults() {
+        const chargePercentage = targetBattery - currentBattery;
+        if (chargePercentage <= 0) {
+            elements.resultsSection.style.display = 'none';
+            elements.noChargeMessage.style.display = 'block';
+            return;
+        }
+        elements.resultsSection.style.display = 'block';
+        elements.noChargeMessage.style.display = 'none';
+
+        const energyNeeded = batteryCapacity * (chargePercentage / 100);
+        const pricing = getPricingWithVat();
+        const costs = {};
+        let lowestCost = Infinity;
+        let bestOption = '';
+
+        Object.entries(pricing).forEach(([key, option]) => {
+            const totalCost = option.connectionFee + (option.perKwhFee * energyNeeded);
+            const effectiveRate = totalCost / energyNeeded;
+            costs[key] = { ...option, totalCost, effectiveRate, energyNeeded };
+            if (totalCost < lowestCost) {
+                lowestCost = totalCost;
+                bestOption = key;
+            }
+        });
+
+        displayCostCards(costs, bestOption);
+        displayRecommendation(costs, bestOption, chargePercentage, energyNeeded);
+    }
+
+    function displayCostCards(costs, bestOption) {
+        const costCardsHTML = Object.entries(costs).map(([key, option]) => {
+            const isBest = key === bestOption;
+            const savings = isBest ? 0 : option.totalCost - costs[bestOption].totalCost;
+            const dotClass = key === 'petrol' ? 'petrol' : key === 'electroOptimised' ? 'optimised' : 'boost';
+            return '<div class="cost-card' + (isBest ? ' best' : '') + '">' +
+                '<div class="provider-header"><span class="provider-dot ' + dotClass + '"></span>' +
+                '<span class="provider-name">' + option.name + '</span></div>' +
+                '<div class="total-cost">€' + option.totalCost.toFixed(3) + '</div>' +
+                '<div class="cost-breakdown">' +
+                'Effective: €' + option.effectiveRate.toFixed(3) + '/kWh<br>' +
+                (option.connectionFee > 0 ? 'Connection: €' + option.connectionFee.toFixed(2) + '<br>' : '') +
+                'Rate: €' + option.perKwhFee.toFixed(2) + '/kWh<br><em>' + option.note + '</em></div>' +
+                (!isBest && savings > 0 ? '<div class="savings">📈 +€' + savings.toFixed(3) + ' vs best</div>' : '') +
+                '</div>';
+        }).join('');
+        elements.costCards.innerHTML = costCardsHTML;
+    }
+
+    function displayRecommendation(costs, bestOption, chargePercentage, energyNeeded) {
+        const pricing = getPricingWithVat();
+        const breakEvenEnergy = pricing.electroOptimised.connectionFee / (pricing.petrol.perKwhFee - pricing.electroOptimised.perKwhFee);
+        const breakEvenPercentage = (breakEvenEnergy / batteryCapacity) * 100;
+        let recommendationHTML = '';
+        const vatSuffix = includeVat ? ' (incl. VAT)' : ' (excl. VAT)';
+
+        if (bestOption === 'petrol') {
+            const petrolSavings = costs.electroOptimised.totalCost - costs.petrol.totalCost;
+            recommendationHTML = '<h3>⚡ Recommendation</h3><strong>Use Petrol</strong> - For this ' + chargePercentage + '% charge (' + energyNeeded.toFixed(2) + ' kWh), Petrol is €' + petrolSavings.toFixed(3) + ' cheaper' + vatSuffix + ' due to no connection fee.<br><br>Break-even point is at ' + Math.round(breakEvenPercentage) + '% charge (' + breakEvenEnergy.toFixed(2) + ' kWh). For larger charges, OPTIMISED becomes more cost-effective.';
+        } else if (bestOption === 'electroOptimised') {
+            const optimisedSavings = costs.petrol.totalCost - costs.electroOptimised.totalCost;
+            recommendationHTML = '<h3>⚡ Recommendation</h3><strong>Use Electro Ljubljana OPTIMISED</strong> - For this ' + chargePercentage + '% charge, you\'ll save €' + optimisedSavings.toFixed(3) + vatSuffix + ' compared to Petrol as the connection fee is offset by lower per-kWh rates.<br><br>OPTIMISED offers the best balance of charging speed and cost for larger charging sessions.';
+        } else {
+            recommendationHTML = '<h3>⚡ Recommendation</h3><strong>Use Electro Ljubljana BOOST</strong> - While more expensive, BOOST provides the fastest charging speed for this ' + chargePercentage + '% charge.<br><br>Choose BOOST when time is more important than cost savings.';
+        }
+        elements.recommendation.innerHTML = recommendationHTML;
+    }
+
+    elements.currentBatterySlider.addEventListener('input', updateValues);
+    elements.targetBatterySlider.addEventListener('input', updateValues);
+    elements.batteryCapacityInput.addEventListener('input', updateValues);
+    elements.vatToggle.addEventListener('change', updateValues);
+    updateValues();
+</script>

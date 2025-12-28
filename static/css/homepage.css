@@ -1,0 +1,180 @@
+/* Homepage Styles - Simon Willison inspired */
+
+.homepage {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.homepage h2 {
+    font-size: 1.25rem;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border, #ddd);
+    color: var(--text-color, #333);
+}
+
+/* Tag Cloud */
+.tag-cloud .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    line-height: 1.8;
+}
+
+.tag-cloud .tag {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background: var(--background-alt, #f5f5f5);
+    border-radius: 4px;
+    text-decoration: none;
+    color: var(--text-color, #333);
+    font-size: 0.9rem;
+    transition: background 0.2s;
+}
+
+.tag-cloud .tag:hover {
+    background: var(--link-color, #3273dc);
+    color: #fff;
+}
+
+.tag-cloud .tag .count {
+    color: var(--text-muted, #666);
+    font-size: 0.8rem;
+}
+
+.tag-cloud .tag:hover .count {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Post Cards */
+.post-card {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-light, #eee);
+}
+
+.post-card:last-child {
+    border-bottom: none;
+}
+
+.post-card time {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted, #666);
+    margin-bottom: 0.25rem;
+}
+
+.post-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.4;
+}
+
+.post-card h3 a {
+    color: var(--text-color, #333);
+    text-decoration: none;
+}
+
+.post-card h3 a:hover {
+    color: var(--link-color, #3273dc);
+}
+
+.post-card .summary {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+    color: var(--text-color, #444);
+    line-height: 1.6;
+}
+
+.post-card .post-tags {
+    margin-top: 0.5rem;
+}
+
+.post-card .post-tags a {
+    font-size: 0.85rem;
+    color: var(--text-muted, #666);
+    text-decoration: none;
+    margin-right: 0.5rem;
+}
+
+.post-card .post-tags a:hover {
+    color: var(--link-color, #3273dc);
+}
+
+/* Sections */
+.highlights {
+    background: var(--background-alt, #f9f9f9);
+    margin: 2rem -1rem;
+    padding: 0 1rem 1rem 1rem;
+    border-radius: 8px;
+}
+
+.highlights h2 {
+    border-bottom-color: var(--border, #ddd);
+}
+
+.recent-posts {
+    margin-top: 2rem;
+}
+
+.view-all {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-light, #eee);
+}
+
+.view-all a {
+    color: var(--link-color, #3273dc);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.view-all a:hover {
+    text-decoration: underline;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .tag-cloud .tag {
+        background: #2a2a2a;
+        color: #ddd;
+    }
+
+    .tag-cloud .tag:hover {
+        background: #8cc2dd;
+        color: #000;
+    }
+
+    .tag-cloud .tag .count {
+        color: #888;
+    }
+
+    .post-card h3 a {
+        color: #eee;
+    }
+
+    .post-card h3 a:hover {
+        color: #8cc2dd;
+    }
+
+    .highlights {
+        background: #1a1a1a;
+    }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .homepage {
+        padding: 0 0.75rem;
+    }
+
+    .highlights {
+        margin: 1.5rem -0.75rem;
+        padding: 0 0.75rem 1rem 0.75rem;
+    }
+
+    .post-card h3 {
+        font-size: 1rem;
+    }
+}

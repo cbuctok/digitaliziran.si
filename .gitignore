@@ -1,0 +1,32 @@
+# Hugo build output
+public/
+resources/_gen/
+.hugo_build.lock
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+
+# Claude-related files and folders
+.claude/
+CLAUDE.md
+
+# Node.js dependencies and build artifacts
+node_modules/
+package-lock.json
+
+# Python virtual environment
+.venv/
+
+# Local environment files
+.env
+.env.local
+.env.*
+
+# Local settings and configuration
+settings.local.json

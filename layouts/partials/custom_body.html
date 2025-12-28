@@ -1,0 +1,37 @@
+<!-- n8n Chat Widget Container -->
+<div id="n8n-chat"></div>
+
+<!-- Initialize n8n Chat Widget -->
+<script type="module">
+    import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+
+    createChat({
+        webhookUrl: "https://n8n.digitaliziran.si/webhook/946450c1-6ed8-4b7f-9a7d-09216bf77c3a/chat",
+        target: "#n8n-chat",
+        mode: "window",
+        showWelcomeScreen: true,
+        enableStreaming: false,
+        initialMessages: [
+            'Welcome to Digitaliziran.si!',
+            'How can I assist you with AI implementation, digital transformation, or AI system auditing?',
+            'We provide expert consulting services for AI solutions, audits, and strategic guidance.'
+        ],
+        i18n: {
+            en: {
+                title: 'Digitaliziran.si AI Consulting',
+                subtitle: "Expert AI implementation and auditing services. How can we help?",
+                footer: '',
+                getStarted: 'Start Consultation',
+                inputPlaceholder: 'Ask about AI strategy, implementation, auditing...',
+            },
+            sl: {
+                title: 'Digitaliziran.si AI Svetovanje',
+                subtitle: "Strokovne AI rešitve in avditi. Kako vam lahko pomagamo?",
+                footer: '',
+                getStarted: 'Začni svetovanje',
+                inputPlaceholder: 'Vprašajte o AI strategiji, implementaciji, avditu...',
+            }
+        },
+        defaultLanguage: 'en',
+    });
+</script>

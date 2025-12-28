@@ -1,0 +1,99 @@
+baseURL = 'https://digitaliziran.si/'
+languageCode = 'en'
+title = 'Digitaliziran'
+theme = 'hugo-bearblog'
+
+[params]
+  description = "Digitaliziran.si"
+  favicon = "/favicon.ico"
+
+[permalinks]
+  posts = '/:slug/'
+  'pages/tools' = '/pages/tools/:slug/'
+  'pages/reference' = '/pages/reference/:slug/'
+  'pages/services' = '/pages/services/:slug/'
+  'pages/legal' = '/pages/legal/:slug/'
+
+[outputs]
+  home = ['HTML', 'RSS']
+  section = ['HTML', 'RSS']
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+# Navigation Menu
+[[menu.main]]
+  name = "Pages"
+  url = "/pages/"
+  weight = 10
+
+[[menu.main]]
+  name = "Services"
+  url = "/pages/services/"
+  weight = 20
+  identifier = "services"
+
+[[menu.main]]
+  name = "Relevant Legislative acts"
+  url = "/pages/services/relevant-legislative-acts/"
+  weight = 21
+  parent = "services"
+
+[[menu.main]]
+  name = "Slides"
+  url = "/pages/services/slides/"
+  weight = 22
+  parent = "services"
+
+[[menu.main]]
+  name = "Legal"
+  url = "/pages/legal/"
+  weight = 30
+  identifier = "legal"
+
+[[menu.main]]
+  name = "Disclaimer"
+  url = "/pages/legal/digitaliziran-si-disclaimer/"
+  weight = 31
+  parent = "legal"
+
+[[menu.main]]
+  name = "Terms and Conditions"
+  url = "/pages/legal/terms-and-conditions/"
+  weight = 32
+  parent = "legal"
+
+[[menu.main]]
+  name = "Code of Ethics & Professional Conduct"
+  url = "/pages/legal/code-of-ethics-professional-conduct/"
+  weight = 33
+  parent = "legal"
+
+[[menu.main]]
+  name = "Contact Information"
+  url = "/pages/legal/contact-information/"
+  weight = 34
+  parent = "legal"
+
+[[menu.main]]
+  name = "Cookie Policy"
+  url = "/pages/legal/cookie-policy-eu/"
+  weight = 35
+  parent = "legal"
+
+[[menu.main]]
+  name = "Privacy Policy"
+  url = "/pages/legal/privacy-policy/"
+  weight = 36
+  parent = "legal"

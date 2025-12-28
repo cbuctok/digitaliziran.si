@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ if not .Params.menu }}
+<h1>{{ .Title }}</h1>
+<p>
+  <i>
+    <time datetime='{{ .Date.Format "2006-01-02" }}'>
+      {{ .Date.Format (default "02 Jan, 2006" .Site.Params.dateFormat) }}
+    </time>
+  </i>
+</p>
+{{ end }}
+
+{{/* Directly include the calculator partial for this specific page */}}
+{{ if eq .File.TranslationBaseName "slovenia-type-2-ac-charging-calculator" }}
+  {{ partial "charging-calculator.html" . }}
+{{ else }}
+  <content>
+    {{ .Content }}
+  </content>
+{{ end }}
+
+{{ if (.Param "enablePostNavigator")}}
+{{- partial "post_navigator.html" . -}}
+{{ end }}
+
+<p>
+  {{ range (.GetTerms "tags") }}
+  <a href="{{ .Permalink }}">#{{ .LinkTitle }}</a>
+  {{ end }}
+</p>
+{{ end }}
