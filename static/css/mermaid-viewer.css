@@ -62,9 +62,10 @@
 .mermaid-container.fullscreen .mermaid {
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     overflow: auto;
+    padding-top: 60px;
 }
 
 .mermaid-container.fullscreen .mermaid-controls {
@@ -72,17 +73,10 @@
     right: 16px;
 }
 
-/* Zoom levels */
-.mermaid-container[data-zoom="0.5"] .mermaid svg { transform: scale(0.5); }
-.mermaid-container[data-zoom="0.75"] .mermaid svg { transform: scale(0.75); }
-.mermaid-container[data-zoom="1"] .mermaid svg { transform: scale(1); }
-.mermaid-container[data-zoom="1.25"] .mermaid svg { transform: scale(1.25); }
-.mermaid-container[data-zoom="1.5"] .mermaid svg { transform: scale(1.5); }
-.mermaid-container[data-zoom="2"] .mermaid svg { transform: scale(2); }
-
+/* SVG transform settings - transforms handled by JavaScript */
 .mermaid-container .mermaid svg {
     transform-origin: center center;
-    transition: transform 0.2s ease;
+    transition: transform 0.15s ease;
 }
 
 /* Pan/drag support */

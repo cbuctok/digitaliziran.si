@@ -69,6 +69,8 @@
 
     function setupControls(container, index) {
         let zoomIndex = DEFAULT_ZOOM_INDEX;
+        let panX = 0;
+        let panY = 0;
         const zoomIndicator = container.querySelector('.zoom-indicator');
         const mermaidDiv = container.querySelector('.mermaid');
 
@@ -77,7 +79,7 @@
             e.stopPropagation();
             if (zoomIndex > 0) {
                 zoomIndex--;
-                updateZoom();
+                updateTransform();
             }
         });
 
@@ -85,7 +87,7 @@
             e.stopPropagation();
             if (zoomIndex < ZOOM_LEVELS.length - 1) {
                 zoomIndex++;
-                updateZoom();
+                updateTransform();
             }
         });
 
@@ -95,6 +97,10 @@
             container.classList.toggle('fullscreen');
             this.textContent = container.classList.contains('fullscreen') ? '✕' : '⛶';
             this.title = container.classList.contains('fullscreen') ? 'Exit fullscreen' : 'Fullscreen';
+            // Reset pan when toggling fullscreen
+            panX = 0;
+            panY = 0;
+            updateTransform();
         });
 
         // ESC to exit fullscreen
@@ -103,6 +109,9 @@
                 container.classList.remove('fullscreen');
                 container.querySelector('.fullscreen').textContent = '⛶';
                 container.querySelector('.fullscreen').title = 'Fullscreen';
+                panX = 0;
+                panY = 0;
+                updateTransform();
             }
         });
 
@@ -115,22 +124,22 @@
                 } else if (e.deltaY > 0 && zoomIndex > 0) {
                     zoomIndex--;
                 }
-                updateZoom();
+                updateTransform();
             }
         }, { passive: false });
 
-        // Pan/drag support
+        // Pan/drag support using transforms
         let isDragging = false;
-        let startX, startY, scrollLeft, scrollTop;
+        let startX, startY, startPanX, startPanY;
 
         mermaidDiv.addEventListener('mousedown', function(e) {
             if (e.button !== 0) return; // Only left click
             isDragging = true;
             container.classList.add('dragging');
-            startX = e.pageX - mermaidDiv.offsetLeft;
-            startY = e.pageY - mermaidDiv.offsetTop;
-            scrollLeft = mermaidDiv.scrollLeft;
-            scrollTop = mermaidDiv.scrollTop;
+            startX = e.clientX;
+            startY = e.clientY;
+            startPanX = panX;
+            startPanY = panY;
         });
 
         document.addEventListener('mouseup', function() {
@@ -141,18 +150,20 @@
         document.addEventListener('mousemove', function(e) {
             if (!isDragging) return;
             e.preventDefault();
-            const x = e.pageX - mermaidDiv.offsetLeft;
-            const y = e.pageY - mermaidDiv.offsetTop;
-            const walkX = (x - startX) * 1.5;
-            const walkY = (y - startY) * 1.5;
-            mermaidDiv.scrollLeft = scrollLeft - walkX;
-            mermaidDiv.scrollTop = scrollTop - walkY;
+            const deltaX = e.clientX - startX;
+            const deltaY = e.clientY - startY;
+            panX = startPanX + deltaX;
+            panY = startPanY + deltaY;
+            updateTransform();
         });
 
-        function updateZoom() {
+        function updateTransform() {
             const zoom = ZOOM_LEVELS[zoomIndex];
-            container.dataset.zoom = zoom.toString();
             zoomIndicator.textContent = Math.round(zoom * 100) + '%';
+            const svg = mermaidDiv.querySelector('svg');
+            if (svg) {
+                svg.style.transform = `translate(${panX}px, ${panY}px) scale(${zoom})`;
+            }
         }
     }
 })();
