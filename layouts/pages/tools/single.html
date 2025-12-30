@@ -10,8 +10,10 @@
 </p>
 {{ end }}
 
-{{/* Directly include the calculator partial for this specific page */}}
-{{ if eq .File.TranslationBaseName "slovenia-type-2-ac-charging-calculator" }}
+{{/* Directly include the calculator partial for these specific pages */}}
+{{ if eq .File.TranslationBaseName "ev-hv-calculator" }}
+  {{ partial "ev-hv-calculator.html" . }}
+{{ else if eq .File.TranslationBaseName "slovenia-type-2-ac-charging-calculator" }}
   {{ partial "charging-calculator.html" . }}
 {{ else }}
   <content>

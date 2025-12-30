@@ -1,0 +1,517 @@
+<style>
+    .ev-hv-calculator {
+        all: initial;
+        font-family:
+            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .ev-hv-calculator * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .ev-hv-calculator .calc-body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+        font-family:
+            -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    .ev-hv-calculator .container {
+        max-width: 700px;
+        margin: 0 auto;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    .ev-hv-calculator .content {
+        padding: 30px;
+    }
+    .ev-hv-calculator .subtitle {
+        text-align: center;
+        color: #718096;
+        margin-bottom: 24px;
+        font-size: 0.95rem;
+    }
+    .ev-hv-calculator .card {
+        background: #f8fafc;
+        border-radius: 12px;
+        padding: 24px;
+        margin-bottom: 20px;
+    }
+    .ev-hv-calculator .card h2 {
+        font-size: 1.1rem;
+        color: #374151;
+        margin-bottom: 16px;
+        padding-bottom: 8px;
+        border-bottom: 2px solid #e2e8f0;
+    }
+    .ev-hv-calculator .input-group {
+        display: flex;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+    @media (max-width: 768px) {
+        .ev-hv-calculator .input-group {
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+    .ev-hv-calculator .input-field {
+        flex: 1;
+    }
+    .ev-hv-calculator .input-field label {
+        display: block;
+        font-size: 0.85rem;
+        color: #4a5568;
+        margin-bottom: 6px;
+        font-weight: 600;
+    }
+    .ev-hv-calculator .input-field input {
+        width: 100%;
+        padding: 12px 14px;
+        border: 2px solid #e2e8f0;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        transition: border-color 0.2s;
+    }
+    .ev-hv-calculator .input-field input:focus {
+        outline: none;
+        border-color: #4f46e5;
+    }
+    .ev-hv-calculator .input-field .unit {
+        font-size: 0.8rem;
+        color: #718096;
+        margin-top: 4px;
+    }
+    .ev-hv-calculator .result-box {
+        background: #f0f7f4;
+        border-radius: 8px;
+        padding: 16px;
+        text-align: center;
+        margin-bottom: 12px;
+    }
+    .ev-hv-calculator .result-box.highlight {
+        background: #ecfdf5;
+        border: 2px solid #10b981;
+    }
+    .ev-hv-calculator .result-box.warning {
+        background: #fffbeb;
+        border: 2px solid #f59e0b;
+    }
+    .ev-hv-calculator .result-box.danger {
+        background: #fef2f2;
+        border: 2px solid #ef4444;
+    }
+    .ev-hv-calculator .result-label {
+        font-size: 0.85rem;
+        color: #4a5568;
+        margin-bottom: 4px;
+    }
+    .ev-hv-calculator .result-value {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #111827;
+    }
+    .ev-hv-calculator .result-value.small {
+        font-size: 1.3rem;
+    }
+    .ev-hv-calculator .verdict {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 8px;
+        color: #374151;
+    }
+    .ev-hv-calculator .scenarios {
+        display: grid;
+        gap: 12px;
+    }
+    .ev-hv-calculator .scenario {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 16px;
+        background: white;
+        border-radius: 8px;
+        border-left: 4px solid #e2e8f0;
+    }
+    .ev-hv-calculator .scenario.ev-wins {
+        border-left-color: #10b981;
+        background: #f0fdf4;
+    }
+    .ev-hv-calculator .scenario.even {
+        border-left-color: #f59e0b;
+        background: #fffbeb;
+    }
+    .ev-hv-calculator .scenario.hv-wins {
+        border-left-color: #ef4444;
+        background: #fef2f2;
+    }
+    .ev-hv-calculator .scenario-name {
+        font-weight: 500;
+        color: #111827;
+    }
+    .ev-hv-calculator .scenario-detail {
+        font-size: 0.8rem;
+        color: #6b7280;
+    }
+    .ev-hv-calculator .scenario-result {
+        text-align: right;
+    }
+    .ev-hv-calculator .scenario-savings {
+        font-weight: 600;
+        font-size: 1.05rem;
+    }
+    .ev-hv-calculator .scenario-savings.positive {
+        color: #10b981;
+    }
+    .ev-hv-calculator .scenario-savings.negative {
+        color: #ef4444;
+    }
+    .ev-hv-calculator .scenario-savings.neutral {
+        color: #f59e0b;
+    }
+    .ev-hv-calculator .scenario-mode {
+        font-size: 0.75rem;
+        color: #6b7280;
+    }
+    .ev-hv-calculator .content .card .formula {
+        background: #edf2f7;
+        padding: 12px 16px;
+        border-radius: 8px;
+        font-family: "Courier New", monospace;
+        font-size: 0.95rem;
+        color: black;
+        margin-top: 12px;
+    }
+    .ev-hv-calculator .content .card .formula strong {
+        color: black;
+    }
+    .ev-hv-calculator .info {
+        font-size: 0.8rem;
+        color: #6b7280;
+        margin-top: 8px;
+    }
+    .ev-hv-calculator .legend {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        margin-top: 16px;
+        flex-wrap: wrap;
+    }
+    .ev-hv-calculator .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        font-size: 0.8rem;
+        color: #4a5568;
+    }
+    .ev-hv-calculator .legend-dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 3px;
+    }
+    .ev-hv-calculator .legend-dot.green {
+        background: #10b981;
+    }
+    .ev-hv-calculator .legend-dot.yellow {
+        background: #f59e0b;
+    }
+    .ev-hv-calculator .legend-dot.red {
+        background: #ef4444;
+    }
+    .ev-hv-calculator .footer {
+        text-align: center;
+        padding: 20px;
+        color: #6b7280;
+        font-size: 0.9rem;
+        border-top: 1px solid #e5e7eb;
+    }
+</style>
+
+<div class="ev-hv-calculator">
+    <div class="calc-body">
+        <div class="container">
+            <div class="content">
+                <p class="subtitle">Fuel vs Electricity Cost Calculator</p>
+
+                <div class="card">
+                    <h2>Current Prices</h2>
+                    <div class="input-group">
+                        <div class="input-field">
+                            <label for="evhv-electricity"
+                                >Electricity Price</label
+                            >
+                            <input
+                                type="number"
+                                id="evhv-electricity"
+                                value="0.37"
+                                step="0.01"
+                                min="0"
+                            />
+                            <div class="unit">EUR per kWh</div>
+                        </div>
+                        <div class="input-field">
+                            <label for="evhv-gasoline"
+                                >Gasoline Price (E10)</label
+                            >
+                            <input
+                                type="number"
+                                id="evhv-gasoline"
+                                value="1.381"
+                                step="0.01"
+                                min="0"
+                            />
+                            <div class="unit">EUR per liter</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Your Price Ratio</h2>
+                    <div class="result-box" id="evhv-ratio-box">
+                        <div class="result-label">Gasoline / Electricity</div>
+                        <div class="result-value" id="evhv-ratio-value">
+                            6.6
+                        </div>
+                        <div class="verdict" id="evhv-ratio-verdict">
+                            Well above break-even - EV mode saves money!
+                        </div>
+                    </div>
+                    <div class="formula">
+                        Break-even ratios: <strong>2.5</strong> (city) |
+                        <strong>3.5</strong> (highway) |
+                        <strong>3.6</strong> (mixed)
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Cost per 100 km by Scenario</h2>
+                    <div class="scenarios" id="evhv-scenarios">
+                        <!-- Filled by JS -->
+                    </div>
+                    <div class="legend">
+                        <div class="legend-item">
+                            <div class="legend-dot green"></div>
+                            EV cheaper
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot yellow"></div>
+                            Nearly even
+                        </div>
+                        <div class="legend-item">
+                            <div class="legend-dot red"></div>
+                            HV cheaper
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h2>Break-Even Gasoline Prices</h2>
+                    <p class="info" style="margin-bottom: 12px">
+                        At your electricity rate, EV becomes cheaper when
+                        gasoline exceeds:
+                    </p>
+                    <div class="scenarios" id="evhv-breakeven">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer">
+                Prius Prime 52 EV/HV Cost Calculator | Prices may vary by
+                location and driving conditions
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    (function () {
+        const scenarios = [
+            {
+                name: "City (ideal)",
+                detail: "30-50 km/h, warm",
+                evKwh: 9.0,
+                hvL: 4.2,
+                ratio: 2.1,
+            },
+            {
+                name: "City (typical)",
+                detail: "Mixed urban",
+                evKwh: 11.0,
+                hvL: 4.4,
+                ratio: 2.5,
+            },
+            {
+                name: "City + A/C",
+                detail: "Summer cooling",
+                evKwh: 13.0,
+                hvL: 4.5,
+                ratio: 2.9,
+            },
+            {
+                name: "Motorway 100 km/h",
+                detail: "Steady cruise",
+                evKwh: 15.5,
+                hvL: 4.4,
+                ratio: 3.5,
+            },
+            {
+                name: "Motorway 120 km/h",
+                detail: "Fast cruise",
+                evKwh: 17.0,
+                hvL: 4.8,
+                ratio: 3.5,
+            },
+            {
+                name: "Winter city",
+                detail: "Heating on",
+                evKwh: 18.0,
+                hvL: 5.0,
+                ratio: 3.6,
+            },
+            {
+                name: "Winter motorway",
+                detail: "Cold + fast",
+                evKwh: 21.0,
+                hvL: 5.6,
+                ratio: 3.8,
+            },
+        ];
+
+        const breakevens = [
+            { name: "City driving", ratio: 2.5 },
+            { name: "Mixed driving", ratio: 3.6 },
+            { name: "Highway driving", ratio: 3.5 },
+            { name: "Winter conditions", ratio: 3.8 },
+        ];
+
+        function calculate() {
+            const elec =
+                parseFloat(document.getElementById("evhv-electricity").value) ||
+                0;
+            const gas =
+                parseFloat(document.getElementById("evhv-gasoline").value) || 0;
+
+            // Calculate ratio
+            const ratio = elec > 0 ? gas / elec : 0;
+            document.getElementById("evhv-ratio-value").textContent =
+                ratio.toFixed(1);
+
+            // Update ratio box styling and verdict
+            const ratioBox = document.getElementById("evhv-ratio-box");
+            const verdict = document.getElementById("evhv-ratio-verdict");
+
+            if (ratio >= 4.0) {
+                ratioBox.className = "result-box highlight";
+                verdict.textContent =
+                    "Well above break-even - EV mode saves money!";
+            } else if (ratio >= 3.2) {
+                ratioBox.className = "result-box warning";
+                verdict.textContent =
+                    "Near break-even - depends on driving style";
+            } else {
+                ratioBox.className = "result-box danger";
+                verdict.textContent =
+                    "Below break-even - HV mode may be cheaper";
+            }
+
+            // Calculate scenarios
+            const scenariosHtml = scenarios
+                .map(function (s) {
+                    const evCost = (s.evKwh * elec).toFixed(2);
+                    const hvCost = (s.hvL * gas).toFixed(2);
+                    const diff = hvCost - evCost;
+
+                    var status, savingsClass, modeText;
+                    if (diff > 0.5) {
+                        status = "ev-wins";
+                        savingsClass = "positive";
+                        modeText = "EV saves EUR" + diff.toFixed(2);
+                    } else if (diff < -0.5) {
+                        status = "hv-wins";
+                        savingsClass = "negative";
+                        modeText = "HV saves EUR" + Math.abs(diff).toFixed(2);
+                    } else {
+                        status = "even";
+                        savingsClass = "neutral";
+                        modeText = "Nearly equal";
+                    }
+
+                    return (
+                        '<div class="scenario ' +
+                        status +
+                        '">' +
+                        "<div>" +
+                        '<div class="scenario-name">' +
+                        s.name +
+                        "</div>" +
+                        '<div class="scenario-detail">' +
+                        s.detail +
+                        "</div>" +
+                        "</div>" +
+                        '<div class="scenario-result">' +
+                        '<div class="scenario-savings ' +
+                        savingsClass +
+                        '">' +
+                        modeText +
+                        "</div>" +
+                        '<div class="scenario-mode">EV: EUR' +
+                        evCost +
+                        " | HV: EUR" +
+                        hvCost +
+                        "</div>" +
+                        "</div>" +
+                        "</div>"
+                    );
+                })
+                .join("");
+            document.getElementById("evhv-scenarios").innerHTML = scenariosHtml;
+
+            // Calculate break-even prices
+            const breakevenHtml = breakevens
+                .map(function (b) {
+                    const breakEvenGas = (elec * b.ratio).toFixed(2);
+                    const currentAbove = gas > elec * b.ratio;
+
+                    return (
+                        '<div class="scenario ' +
+                        (currentAbove ? "ev-wins" : "hv-wins") +
+                        '">' +
+                        "<div>" +
+                        '<div class="scenario-name">' +
+                        b.name +
+                        "</div>" +
+                        '<div class="scenario-detail">Ratio: ' +
+                        b.ratio +
+                        "</div>" +
+                        "</div>" +
+                        '<div class="scenario-result">' +
+                        '<div class="scenario-savings ' +
+                        (currentAbove ? "positive" : "negative") +
+                        '">EUR' +
+                        breakEvenGas +
+                        "/L</div>" +
+                        '<div class="scenario-mode">' +
+                        (currentAbove ? "Currently above" : "Currently below") +
+                        "</div>" +
+                        "</div>" +
+                        "</div>"
+                    );
+                })
+                .join("");
+            document.getElementById("evhv-breakeven").innerHTML = breakevenHtml;
+        }
+
+        // Attach event listeners
+        document
+            .getElementById("evhv-electricity")
+            .addEventListener("input", calculate);
+        document
+            .getElementById("evhv-gasoline")
+            .addEventListener("input", calculate);
+
+        // Initial calculation
+        calculate();
+    })();
+</script>
