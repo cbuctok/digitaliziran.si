@@ -1,0 +1,16 @@
+{{- $tags := slice -}}
+{{- range $name, $taxonomy := .Site.Taxonomies.tags -}}
+  {{- if $name -}}
+    {{- $tags = $tags | append $name -}}
+  {{- end -}}
+{{- end -}}
+{{- $categories := slice -}}
+{{- range $name, $taxonomy := .Site.Taxonomies.categories -}}
+  {{- if $name -}}
+    {{- $categories = $categories | append $name -}}
+  {{- end -}}
+{{- end -}}
+{
+  "tags": {{ $tags | jsonify }},
+  "categories": {{ $categories | jsonify }}
+}

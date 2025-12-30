@@ -14,6 +14,10 @@ theme = 'hugo-bearblog'
   'pages/services' = '/pages/services/:slug/'
   'pages/legal' = '/pages/legal/:slug/'
 
+[outputFormats.TaxonomiesJSON]
+  mediaType = "application/json"
+  baseName = "taxonomies"
+
 [outputs]
   home = ['HTML', 'RSS']
   section = ['HTML', 'RSS']
