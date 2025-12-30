@@ -1,0 +1,31 @@
+version = 1
+
+# Blog content (posts, pages) - Creative Commons
+[[annotations]]
+path = "content/**"
+SPDX-FileCopyrightText = "2024-2025 Greg"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Documentation
+[[annotations]]
+path = ["README.md"]
+SPDX-FileCopyrightText = "2024-2025 Greg"
+SPDX-License-Identifier = "CC-BY-4.0"
+
+# Code files (scripts, templates, stylesheets)
+[[annotations]]
+path = ["*.py", "*.sh", "layouts/**", "static/css/**", "static/js/**"]
+SPDX-FileCopyrightText = "2024-2025 Greg"
+SPDX-License-Identifier = "MIT"
+
+# Configuration files
+[[annotations]]
+path = ["hugo.toml", ".gitignore", ".github/**"]
+SPDX-FileCopyrightText = "2024-2025 Greg"
+SPDX-License-Identifier = "MIT"
+
+# Static assets (images, etc.)
+[[annotations]]
+path = ["static/**/*.png", "static/**/*.jpg", "static/**/*.ico", "static/**/*.svg"]
+SPDX-FileCopyrightText = "2024-2025 Greg"
+SPDX-License-Identifier = "CC-BY-4.0"

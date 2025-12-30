@@ -97,4 +97,9 @@ If you want to use a custom domain:
 
 ## License
 
-This project is licensed under the terms in the LICENSE file.
+This project is [REUSE 3.3](https://reuse.software/spec-3.3/) compliant with dual licensing:
+
+- **Content** (posts, documentation, images): [CC-BY-4.0](LICENSES/CC-BY-4.0.txt)
+- **Code** (scripts, templates, CSS, JS): [MIT](LICENSES/MIT.txt)
+
+See `REUSE.toml` for detailed file-to-license mapping.
