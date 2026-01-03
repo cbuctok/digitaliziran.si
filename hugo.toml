@@ -5,7 +5,7 @@ theme = 'hugo-bearblog'
 
 [params]
   description = "Digitaliziran.si"
-  favicon = "/favicon.ico"
+  favicon = "favicon.ico"
 
 [permalinks]
   posts = '/:year/:month/:day/:slug/'
