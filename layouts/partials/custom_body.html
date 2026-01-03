@@ -3,7 +3,7 @@
 
 <!-- Initialize n8n Chat Widget -->
 <script type="module">
-    import { createChat } from "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js";
+    import { createChat } from "{{ "lib/n8n/chat.bundle.es.min.js" | absURL }}";
 
     createChat({
         webhookUrl: "https://n8n.digitaliziran.si/webhook/946450c1-6ed8-4b7f-9a7d-09216bf77c3a/chat",

@@ -30,3 +30,6 @@ package-lock.json
 
 # Local settings and configuration
 settings.local.json
+
+# External dependencies (fetched during build)
+static/lib/
