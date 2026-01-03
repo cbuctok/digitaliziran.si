@@ -38,6 +38,11 @@ theme = 'hugo-bearblog'
 
 # Navigation Menu
 [[menu.main]]
+  name = "Now"
+  url = "/now/"
+  weight = 5
+
+[[menu.main]]
   name = "Pages"
   url = "/pages/"
   weight = 10
