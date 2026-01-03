@@ -4,8 +4,6 @@ date: 2026-01-03
 slug: now
 ---
 
-*Last updated: January 2026*
-
 ## Building an AI Governance Practice in Slovenia
 
 I'm co-founding an AI consulting and auditing startup for SMEs. We help companies that are too big to ignore AI, too small for expensive international consultants.
