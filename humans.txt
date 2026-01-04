@@ -1,0 +1,8 @@
+/* TEAM */
+Grigory Evseev s.p.
+Site: digitaliziran.si
+Location: Lesce, Slovenia
+
+/* SITE */
+Built with: Hugo + hugo-bearblog theme
+Last update: 2026
