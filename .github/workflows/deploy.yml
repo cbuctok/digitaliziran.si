@@ -36,6 +36,13 @@ jobs:
       - name: Run markdown linter
         run: python3 lint_markdown.py content --fix
 
+      - name: Fetch external dependencies
+        run: |
+          mkdir -p static/lib/mermaid static/lib/n8n
+          curl -sL "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.min.js" -o static/lib/mermaid/mermaid.min.js
+          curl -sL "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" -o static/lib/n8n/style.css
+          curl -sL "https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.min.js" -o static/lib/n8n/chat.bundle.es.min.js
+
       - name: Build Hugo site
         run: hugo --minify
 
