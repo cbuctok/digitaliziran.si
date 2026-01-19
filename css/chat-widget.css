@@ -1,0 +1,205 @@
+/*
+ * Digitaliziran.si Chat Widget - Black & White Theme
+ * Custom styles for n8n Chat integration
+ */
+
+:root {
+    /* Primary Colors - Black & White Theme */
+    --chat--color--primary: #000000;
+    --chat--color--primary-shade-50: #1a1a1a;
+    --chat--color--primary--shade-100: #333333;
+
+    --chat--color--secondary: #333333;
+    --chat--color-secondary-shade-50: #4d4d4d;
+
+    /* Neutral Colors */
+    --chat--color-white: #ffffff;
+    --chat--color-light: #f5f5f5;
+    --chat--color-light-shade-50: #e8e8e8;
+    --chat--color-light-shade-100: #cccccc;
+    --chat--color-medium: #888888;
+    --chat--color-dark: #000000;
+    --chat--color-disabled: #cccccc;
+    --chat--color-typing: #404040;
+
+    /* Message Colors */
+    --chat--message--bot--background: #ffffff;
+    --chat--message--bot--color: #000000;
+    --chat--message--bot--border: none;
+    --chat--message--user--background: #333333;
+    --chat--message--user--color: #ffffff;
+    --chat--message--user--border: none;
+    --chat--message--pre--background: #0000000d;
+
+    /* Button/Toggle Colors */
+    --chat--toggle--background: #000000;
+    --chat--toggle--hover--background: #1a1a1a;
+    --chat--toggle--active--background: #333333;
+    --chat--toggle--color: #ffffff;
+    --chat--toggle--size: 64px;
+
+    --chat--button--color: #ffffff;
+    --chat--button--background: #000000;
+    --chat--button--hover--color: #ffffff;
+    --chat--button--hover--background: #333333;
+
+    /* Input/Interface Colors */
+    --chat--input--background: #ffffff;
+    --chat--input--send--button--background: #ffffff;
+    --chat--input--send--button--color: #000000;
+    --chat--body--background: #f5f5f5;
+    --chat--footer--background: #f5f5f5;
+    --chat--footer--color: #000000;
+
+    /* Header Colors - Hidden */
+    --chat--header-height: 0;
+    --chat--header--padding: 0;
+    --chat--header--background: transparent;
+    --chat--header--color: transparent;
+    --chat--header--border-top: none;
+    --chat--header--border-bottom: none;
+    --chat--heading--font-size: 0;
+    --chat--subtitle--font-size: 0;
+    --chat--subtitle--line-height: 0;
+
+    /* Typography */
+    --chat--font-family:
+        -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+        Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    --chat--font-size: 16px;
+    --chat--font-size-sm: 14px;
+    --chat--font-size-lg: 18px;
+    --chat--line-height: 1.5;
+    --chat--font-weight-normal: 400;
+    --chat--font-weight-bold: 600;
+
+    /* Layout & Spacing */
+    --chat--spacing: 1rem;
+    --chat--border-radius: 0.5rem;
+    --chat--transition-duration: 0.2s;
+    --chat--window--width: 380px;
+    --chat--window--height: 580px;
+    --chat--textarea--height: 56px;
+    --chat--window--box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    --chat--window--border: 1px solid rgba(0, 0, 0, 0.08);
+
+    /* Message bubble improvements */
+    --chat--message--border-radius: 0.75rem;
+    --chat--message--padding: 1rem 1.25rem;
+    --chat--message--margin: 0.75rem 0;
+
+    /* Input field improvements */
+    --chat--input--border-radius: 0.5rem;
+    --chat--input--padding: 0.75rem 1rem;
+    --chat--input--border: 1px solid #e0e0e0;
+
+    /* Toggle button improvements */
+    --chat--toggle--box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    --chat--toggle--border-radius: 50%;
+}
+
+/* Hide header */
+.chat-header,
+[data-test-id="chat-header"] {
+    display: none !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Apply font family to all chat elements */
+#n8n-chat,
+.chat-window,
+.chat-body,
+.chat-footer,
+.chat-message,
+.chat-input,
+.chat-textarea,
+.chat-button {
+    font-family: var(--chat--font-family) !important;
+}
+
+/* Improve overall chat window styling */
+.chat-window {
+    border-radius: var(--chat--border-radius) !important;
+    box-shadow: var(--chat--window--box-shadow) !important;
+    border: var(--chat--window--border) !important;
+    overflow: hidden !important;
+}
+
+/* Style message bubbles */
+.chat-message {
+    border-radius: var(--chat--message--border-radius) !important;
+    padding: var(--chat--message--padding) !important;
+    margin: var(--chat--message--margin) !important;
+    font-size: var(--chat--font-size) !important;
+    line-height: var(--chat--line-height) !important;
+}
+
+/* Style input area */
+.chat-input {
+    border-radius: var(--chat--input--border-radius) !important;
+    padding: var(--chat--input--padding) !important;
+    border: var(--chat--input--border) !important;
+    font-family: var(--chat--font-family) !important;
+    font-size: var(--chat--font-size) !important;
+}
+
+/* Style send button */
+.chat-send-button {
+    border-radius: 0.5rem !important;
+    width: 40px !important;
+    height: 40px !important;
+}
+
+/* Style toggle button */
+.chat-toggle {
+    border-radius: var(--chat--toggle--border-radius) !important;
+    box-shadow: var(--chat--toggle--box-shadow) !important;
+    transition: all var(--chat--transition-duration) ease !important;
+}
+
+/* Add smooth transitions */
+.chat-toggle,
+.chat-button,
+.chat-message {
+    transition: all var(--chat--transition-duration) ease !important;
+}
+
+/* Improve scrollbar styling */
+.chat-body::-webkit-scrollbar {
+    width: 8px !important;
+}
+
+.chat-body::-webkit-scrollbar-track {
+    background: #f1f1f1 !important;
+    border-radius: 4px !important;
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    background: #cccccc !important;
+    border-radius: 4px !important;
+}
+
+.chat-body::-webkit-scrollbar-thumb:hover {
+    background: #888888 !important;
+}
+
+/* Add subtle hover effects to messages */
+.chat-message:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Style typing indicator */
+.chat-typing-indicator {
+    font-family: var(--chat--font-family) !important;
+    color: var(--chat--color-typing) !important;
+}
+
+/* Style timestamps */
+.chat-message-timestamp {
+    font-size: var(--chat--font-size-sm) !important;
+    color: var(--chat--color-medium) !important;
+    opacity: 0.8 !important;
+}

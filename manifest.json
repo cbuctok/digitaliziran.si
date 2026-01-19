@@ -1,0 +1,16 @@
+{
+  "name": "Digitaliziran",
+  "short_name": "Digitaliziran",
+  "description": "Tech blog covering AI, security, privacy, and compliance",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    }
+  ]
+}
